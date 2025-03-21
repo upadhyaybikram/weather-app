@@ -8,7 +8,7 @@ const SearchSection = ({ getWeatherDetails, searchInputRef }) => {
     // Now get the weather details of the entered city
     //const API_URL = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${searchInput.value}`;
     //for 53, commpent above url and add the days on query parameter as well, for 54 go app and get hourly data
-    const API_URL = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${searchInput.value}&days=2`;
+    const API_URL = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${searchInput.value}&days=2`;
 
     // get the weather details from the entered city
     //
@@ -21,7 +21,7 @@ const SearchSection = ({ getWeatherDetails, searchInputRef }) => {
       (position) => {
         console.log(position);
         const { latitude, longitude } = position.coords;
-        const API_URL = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${latitude},${longitude}&days=2`;
+        const API_URL = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${latitude},${longitude}&days=2`;
 
         // get the weather details from the user's current location
         //
