@@ -15,12 +15,12 @@ import { weatherCodes } from "../constants";
 // 56. for original code comment above and update the above function to get HourlyWeatherItem
 
 const HourlyWeatherItem = ({ hourlyWeather }) => {
-  console.log(hourlyWeather);
   const temperature = Math.floor(hourlyWeather.temp_c);
   const time = hourlyWeather.time.split(" ")[1].substring(0, 5);
   const weatherIcon = Object.keys(weatherCodes).find((icon) =>
     weatherCodes[icon].includes(hourlyWeather.condition.code)
   );
+  
   return (
     <li className="weather-item">
       <p className="time">{time}</p>
